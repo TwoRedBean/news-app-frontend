@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { fetchArticles, fetchArticleById } from "./api/articleService";
 import ArticleList from "./components/ArticleList";
+import ArticleDetails from "./components/ArticleDetails";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,11 +21,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <ArticleList />
+      <ArticleDetails />
       <div className="card">
         <button onClick={() => {
           setCount((count) => count + 1)
-          console.log(fetchArticles())
-          console.log(fetchArticleById("1"))
           }}>
           count is {count}
         </button>
