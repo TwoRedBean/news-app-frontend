@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { fetchArticleById } from "../api/articleService";
 
 interface Article {
@@ -28,6 +28,7 @@ const ArticleDetails: React.FC = () => {
         <div>
             <h1>{article.title}</h1>
             <p>{article.content}</p>
+            <Link to={`/`}>Home</Link>
         </div>
     );
 };

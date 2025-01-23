@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { fetchArticles } from "../api/articleService";
 
 interface Article {
@@ -26,6 +27,7 @@ const ArticleList: React.FC = () => {
             {articles.map((article) => (
                 <div key={article.id}>
                     <h2>{article.title}</h2>
+                    <Link to={`/articles/${article.id}`}>Read More</Link>
                 </div>
             ))}
         </div>
