@@ -24,12 +24,14 @@ const ArticleList: React.FC = () => {
     return (
         <div>
             <h1>News Articles</h1>
-            {articles.map((article) => (
-                <div key={article.id}>
-                    <h2>{article.title}</h2>
-                    <Link to={`/articles/${article.id}`}>Read More</Link>
-                </div>
-            ))}
+            <div className="card-container">
+                {articles.map((article) => (
+                    <div key={article.id} className="article-preview">
+                        <h2>{article.title}</h2>
+                        <Link to={`/articles/${article.id}`}>Read More</Link>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

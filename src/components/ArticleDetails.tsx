@@ -25,7 +25,7 @@ const ArticleDetails: React.FC = () => {
     if (!article) return <div>Loading article...</div>;
 
     return (
-        <div>
+        <div className="article-details">
             <h1>{article.title}</h1>
             <p>{article.content}</p>
             <Link to={`/`}>Home</Link>
