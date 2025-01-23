@@ -9,6 +9,13 @@ h1 {
   margin: 20px 0;
 }
 
+img {
+  height: 150px;
+  width: auto;
+  display: block;
+  margin: 20px auto;
+}
+
 .card-container {
   display: flex;
   flex-direction: row;

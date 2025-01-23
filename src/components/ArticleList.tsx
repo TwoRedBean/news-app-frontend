@@ -5,6 +5,7 @@ import { fetchArticles } from "../api/articleService";
 interface Article {
     id: number;
     title: string;
+    imageUrl: string;
     content: string;
 }
 
@@ -27,6 +28,7 @@ const ArticleList: React.FC = () => {
             <div className="card-container">
                 {articles.map((article) => (
                     <div key={article.id} className="article-preview">
+                        <img src={article.imageUrl} alt={article.title}/>
                         <h2>{article.title}</h2>
                         <Link to={`/articles/${article.id}`}>Read More</Link>
                     </div>
