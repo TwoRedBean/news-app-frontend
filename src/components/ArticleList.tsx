@@ -28,9 +28,10 @@ const ArticleList: React.FC = () => {
             <div className="card-container">
                 {articles.map((article) => (
                     <div key={article.id} className="article-preview">
-                        <img src={article.imageUrl} alt={article.title}/>
-                        <h2>{article.title}</h2>
-                        <Link to={`/articles/${article.id}`}>Read More</Link>
+                        <Link to={`/articles/${article.id}`}>
+                            <img src={article.imageUrl} alt={article.title}/>
+                            <h2>{article.title}</h2>
+                        </Link>
                     </div>
                 ))}
             </div>
