@@ -18,14 +18,6 @@ const ArticleDetails: React.FC = () => {
             fetchArticleById(id)
                 .then(setArticle)
                 .catch((err: Error) => setError(err.message));
-
-            const testContent = `
-            article content
-            
-            next paragraph
-
-            another paragraph
-            `;
         }
     }, [id]);
 

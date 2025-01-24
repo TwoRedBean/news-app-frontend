@@ -24,7 +24,7 @@ const ArticleList: React.FC = () => {
 
     return (
         <div>
-            <h1>News Articles</h1>
+            <h1 className="home-page-title">News Articles</h1>
             <div className="card-container">
                 {articles.map((article) => (
                     <div key={article.id} className="article-preview">
