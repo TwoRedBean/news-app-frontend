@@ -18,16 +18,28 @@ const ArticleDetails: React.FC = () => {
             fetchArticleById(id)
                 .then(setArticle)
                 .catch((err: Error) => setError(err.message));
+
+            const testContent = `
+            article content
+            
+            next paragraph
+
+            another paragraph
+            `;
         }
     }, [id]);
 
     if (error) return <div>Error: {error}</div>;
     if (!article) return <div>Loading article...</div>;
 
+    const paragraphs = article.content.split('\n').filter(paragraph => paragraph.trim() !== '');
+
     return (
         <div className="article-details">
             <h1>{article.title}</h1>
-            <p>{article.content}</p>
+            {paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+            ))}
             <Link to={`/`}>Home</Link>
         </div>
     );
