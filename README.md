@@ -2,7 +2,7 @@ Frontend project for news-app.
 
 To run frontend service:
 
-navigate to "news-app-frontend" folder
-run command "npm install"
-run command "npm run dev" to run news app frontend
-open "http://localhost:5173/" in browser of choice
+1. navigate to "news-app-frontend" folder
+2. run command "npm install"
+3. run command "npm run dev" to run news app frontend
+4. open "http://localhost:5173/" in browser of choice
